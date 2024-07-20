@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('like', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id')->unique();
             $table->unsignedBigInteger('post_id');
             $table->timestamps();
         });
